@@ -28,12 +28,15 @@
           //if scrolling up...
           if (currentTop > 0 && $('#mainNav').hasClass('is-fixed')) {
             $('#mainNav').addClass('is-visible');
+            document.getElementById("oiml_logo").src = "img/olson-immigration-law-logo-nbg.png";
           } else {
             $('#mainNav').removeClass('is-visible is-fixed');
+            document.getElementById("oiml_logo").src = "img/olson-immigration-law-logo-nbg-white.png";
           }
         } else if (currentTop > this.previousTop) {
           //if scrolling down...
           $('#mainNav').removeClass('is-visible');
+          document.getElementById("oiml_logo").src = "img/olson-immigration-law-logo-nbg.png";
           if (currentTop > headerHeight && !$('#mainNav').hasClass('is-fixed')) $('#mainNav').addClass('is-fixed');
         }
         this.previousTop = currentTop;
