@@ -49,18 +49,18 @@
   document.querySelector('#copyright-year').innerHTML = year;
 
   //copy email to clipboard
-  document.querySelector('#copy-to-clipboard').addEventListener('click', async event => {
-    if (!navigator.clipboard) {
-      //clipboard api not available
-      return
-    }
-    const text = document.querySelector('#copy-to-clipboard-text').innerHTML;
-    try {
-      await navigator.clipboard.writeText(text)
-      document.querySelector("#copy-to-clipboard-raplace").innerHTML = 'Email copied to clipboard';
-    } catch (err) {
-      console.error('Failed to copy!', err);
-    }
-  });
+  // document.querySelector('#copy-to-clipboard').addEventListener('click', async event => {
+  //   if (!navigator.clipboard) {
+  //     //clipboard api not available
+  //     return
+  //   }
+  //   const text = document.querySelector('#copy-to-clipboard-text').innerHTML;
+  //   try {
+  //     await navigator.clipboard.writeText(text)
+  //     document.querySelector("#copy-to-clipboard-raplace").innerHTML = 'Email copied to clipboard';
+  //   } catch (err) {
+  //     console.error('Failed to copy!', err);
+  //   }
+  // });
 
 })(jQuery); // End of use strict
